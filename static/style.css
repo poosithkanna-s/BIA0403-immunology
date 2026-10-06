@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f4efe7;
+    color: #332d28;
+    font-family: Georgia, 'Times New Roman',serif;
+}
+
+nav {
+    background: #e8dfd3;
+    border-bottom: 1px solid #c8bbaa;
+    padding: 15px 6%;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #332d28;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 0 22px;
+}
+
+.hero {
+    background: #faf7f1;
+    border: 1px solid #d3c7ba;
+    padding: 42x;
+}
