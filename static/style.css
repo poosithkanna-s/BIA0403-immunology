@@ -84,3 +84,122 @@ form,
     margin-top: 24px;
 }
 
+label {
+    display: block;
+    margin: 14px 0;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 10px;
+    border: 1px solid #bfb2a4;
+    background: white;
+    font: inherit;
+}
+
+button {
+    margin-top: 15px;
+    background: #4d433b;
+    color: white;
+    border: 0;
+    padding: 11px 20px;
+    font: inherit;
+    cursor: pointer;
+}
+.check {
+    display: inline-flex;
+    width: 48%;
+    align-items: center;
+    gap: 8px;
+}
+.check input {
+    width: auto;
+    margin: 0;
+}
+
+.labgrid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+fieldset {
+    border: 1px solid #d3c7ba;
+    padding: 15px;
+}
+.resulthead {
+    display: flex;
+    justify-content: space-between;
+}
+.bar {
+    height: 8px;
+    background: #ded5cb;
+    margin: 10px 0;
+}
+
+.bar span{
+    display: block;
+    height: 100%;
+    background: #776658;
+}
+
+.error {
+    background: #f1d9d2;
+    padding: 12px;
+}
+
+.muted {
+    color: #6d6259;
+}
+.stats {
+    display: flex;
+    gap: 12px;
+}
+
+.stats div {
+    flex: 1;
+    background: #eee6db;
+    padding: 20px;
+}
+.stats b,
+.stats small {
+    display: block;
+}
+
+.stats b {
+    font-size: 24px;
+}
+.sequence {
+    display: block;
+    font-size: 54px;
+    margin: 15px;
+}
+
+@media (max-width: 700px) {
+    .grid,
+    .labgrid {
+        grid-template-columns: 1fr;
+    
+     }
+
+.check{
+    width: 100%;
+
+    }
+
+h1 {
+    font-size: 30px;
+    }
+
+main {
+    margin: 25px auto;
+    }
+
+.hero {
+    padding: 25px;
+    }   
+
+}
