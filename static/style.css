@@ -34,3 +34,53 @@ main {
     border: 1px solid #d3c7ba;
     padding: 42x;
 }
+
+.eyebrow{
+    front-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #806f61;
+}
+h1 {
+    font-size: 38px;
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+.card {
+    background: #eee6db;
+    border: 1px solid #cfc1b1;
+    padding: 22px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    background: #e7ddcf;
+}
+
+.notice {
+    margin-top: 18px;
+    padding: 18px;
+    background: #e9dfd1;
+    border-left: 4px solid #8b7764;
+}
+form,
+.results,
+.score {
+    background: #faf7f1;
+    border: 1px solid #d3c7ba;
+    padding: 24px;
+    margin-top: 24px;
+}
+
