@@ -32,11 +32,11 @@ main {
 .hero {
     background: #faf7f1;
     border: 1px solid #d3c7ba;
-    padding: 42x;
+    padding: 42px;
 }
 
 .eyebrow{
-    front-size: 13px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #806f61;
@@ -182,24 +182,21 @@ fieldset {
     .grid,
     .labgrid {
         grid-template-columns: 1fr;
-    
-     }
-
-.check{
-    width: 100%;
-
     }
 
-h1 {
-    font-size: 30px;
+    .check {
+        width: 100%;
     }
 
-main {
-    margin: 25px auto;
+    h1 {
+        font-size: 30px;
     }
 
-.hero {
-    padding: 25px;
-    }   
+    main {
+        margin: 25px auto;
+    }
 
+    .hero {
+        padding: 25px;
+    }
 }
