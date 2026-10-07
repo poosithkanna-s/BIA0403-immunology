@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Antigen Analysis</h1>
+
+<p class="muted">
+    sequence-based educational heuristic; not an experimentally confirmed 
+    epitope or binding prediction.
+
+</p>    
+<form method="post">
+    <label>
+        FASTA or amino-acid sequence
+        <textarea
+            name="sequence"
+            rows="9"
+            cols="80"
+        placeholder=">Example_Antigen&#10;MKTIIALSYIFCLVFADYKDDDDK"
+    ></textarea>
+    </label>
+    <button>Analyze sequence</button>
+</form>
+
+{% if error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+
+{% if result %}
+   <section class="results">
+    <div class="stats">
+        <div>
+            <b>{{result.length}}</b> 
+            <small>Residues</small>     
+        </div>
+        <div>
+            <b>{{result.hydrophobicity}}%</b>
+            <small>Hydrophobicity</small>
+        </div>
+        <div>
+            <b>{{ result.antigenicity}}%</b>
+            <small>Antigenicity</small>
+        </div>
+    </div>
+    <h2>Hydrophilic candidate regions</h2>
+    {% for r in result.hydrophilic %}
+        <p class="sequence">
+            <span>{{r[0]}}-{{r[1]}} </span>{{r[2]}}
+        </p>
+    {% else %}
+        <p>No strong regions detected by this simple heuristic.</p>
+    {% endfor %}
+
+   </section>
+   {% endif %}
+   {% endblock %}
+
