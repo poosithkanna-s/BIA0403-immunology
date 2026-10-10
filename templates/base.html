@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Immunology Analysis System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/diagnosis">Diagnosis</a>
+        <a href="/antigen">Antigen Analysis</a>
+        <a href="/interaction">Interaction</a>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        Educational/research demonstration only - not a medical diagnosis.
+    </footer>
+</body>
+</html>
