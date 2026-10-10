@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <p class="eyebrow">University Biotechnology Project</p>
+
+    <h1>Immunological Disease Diagnosis and Antigen Interaction Analysis System</h1>
+
+    <p>
+        A small computational demonstration for exploring immunological patterns,
+        protein sequences and sequence-based interaction estimates.
+    </p>
+
+    <div class="grid">
+
+        <a class="card" href="/diagnosis">
+            <h2>01 Diagnosis</h2>
+            <p>
+                Enter symptoms and selected laboratory values to obtain
+                a transparent educational prediction.
+            </p>
+        </a>
+
+        <a class="card" href="/antigen">
+            <h2>02 Antigen Analysis</h2>
+            <p>
+                Inspect protein length, hydrophobicity, hydrophilic regions
+                and an antigenicity estimate.
+            </p>
+        </a>
+
+        <a class="card" href="/interaction">
+            <h2>03 Interaction</h2>
+            <p>
+                Compare two sequences using a simple composition-based
+                compatibility estimate.
+            </p>
+        </a>
+
+    </div>
+</section>
+
+<div class="notice">
+    <b>Disclaimer:</b> This application is intended for educational and research
+    purposes only. Results are computational predictions and must not be considered
+    a medical diagnosis or a substitute for professional medical advice.
+</div>
+{% endblock %}
