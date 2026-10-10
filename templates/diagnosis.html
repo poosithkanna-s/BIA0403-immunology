@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Diagnosis</h1>
+<p class="muted">
+    Fictional educational analysis. The scoring rules are simplified and not clinically validated.
+</p>
+
+<form method="post">
+    <label>Age
+        <input type="number" name="age" min="1" max="120">
+    </label>
+
+    <label>Sex
+        <select name="sex">
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+        </select>
+    </label>
+    <fieldset>
+        <legend>Symptoms</legend>
+        {% for s in ['fatigue', 'joint pain', 'joint swelling', 'photosensitivity', 
+            'malar rash', 'hair loss', 'dry eyes', 'dry mouth', 'diarrhea', 
+            'bloating', 'recurrent infections', 'wheezing', 'hives',
+            'fever', 'skin rash']%}
+        <label class="check">
+            <input type="checkbox" name="symptoms" value="{{ s }}">
+            {{ s.title() }}
+        </label>
+        {% endfor %}
+    </fieldset>
+
+    <div class="labgrid">
+        {% for n in [('CRP', 'crp'), ('RF', 'rf'), ('ANA titre', 'ana'), 
+        ('Anti-dsDNA', 'dsdna'), ('IgE', 'ige')] %}
+        <label>{{ n[0] }}
+            <input type="number" step="any" name="{{ n[1]}}">
+        </label>
+        {% endfor %}
+    </div>
+    <button>Run analysis</button>
+</form>
+
+{% if error %}
+    <p class="error">{{ error }}</p>
+{% endif %}
+{% if results %}
+<section class="results">
+    <h2>Ranked predictions</h2>
+
+    {% for r in results %}
+    <article>
+        <div class="resulthead">
+            <b>{{loop.index }}. {{ r.name }}</b>
+            <strong>{{ r.score }}</strong>
+        </div>
+
+        <p><b>Supporting factors:</b> {{ r.factors | join(', ') }}</p>
+    </article>
+    {% endfor %}
+</section>
+{% endif %}
+{% endblock %}
