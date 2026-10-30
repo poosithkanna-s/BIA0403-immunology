@@ -19,16 +19,6 @@ An interactive, full-stack web application developed for an Immunology academic 
 * **Frontend:** HTML5, CSS3 (Custom styling via `static/style.css`)
 ---
 
-## AI Assistance Disclosure
-
-This project was developed with assistance from an AI tool (Claude by Anthropic).
-AI was used for: reviewing code, suggesting fixes for CSS and HTML template
-issues, and drafting the README.
-The Flask application logic and project design are my own work.
-I reviewed, tested and understand all code in this repository, and I am
-responsible for the final submission.
----
-
 ## 📂 Project Structure
 ```text
 BIA0403-immunology/
@@ -70,6 +60,15 @@ Follow these steps to run the application on your local machine:
 4. **Open in browser:**
    Navigate to `http://127.0.0.1:5000/` to launch the app UI.
 
+---
+## AI Assistance Disclosure
+
+This project was developed with assistance from an AI tool (Claude by Anthropic).
+AI was used for: reviewing code, suggesting fixes for CSS and HTML template
+issues, and drafting the README.
+The Flask application logic and project design are my own work.
+I reviewed, tested and understand all code in this repository, and I am
+responsible for the final submission.
 ---
 
 ## 👤 Author
